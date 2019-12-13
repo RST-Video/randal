@@ -62,7 +62,7 @@ The usage of smee.io with GitHub apps is outlined in https://developer.github.co
    bundle install
    ```
 
-## Execution
+## Running the service
 From the directory that has the randal_service.rb file.
 ```
 ruby randal_service.rb
