@@ -68,6 +68,7 @@ class GHAapp < Sinatra::Application
       if @payload['action'] === 'created'
 	sleep(3)
         handle_repository_created_event(@payload)
+	notify_branch_protection_status(@payload)
       end
     end
 
@@ -105,6 +106,22 @@ class GHAapp < Sinatra::Application
             teams: []
           }
         }	  
+      )
+    end
+
+    def notify_branch_protection_status(payload)
+      repo = payload['repository']['full_name']
+      issue_body = 
+	"@mreams-ITIF 
+	Branch protections have been added to the master branch. 
+	- Pull requests are required before merging 
+	- Stale pull requests are dismissed 
+	- Branches are required to be up to date before merging 
+	- Force pushes and deletions are not allowed"
+      @installation_client.create_issue(
+	repo,
+	'Branch Protections Added',
+	issue_body
       )
     end
 
