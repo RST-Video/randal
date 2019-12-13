@@ -91,14 +91,14 @@ class GHAapp < Sinatra::Application
 	    strict: true,
 	    contexts: []
 	  },
-          enforce_admins: true,
+          enforce_admins: false,
           required_pull_request_reviews: {
 	    dismissal_restrictions: {
 	      users: [],
               teams: []
             },
             dismiss_stale_reviews: true,
-            require_code_owner_reviews: true
+            require_code_owner_reviews: false
           },
           restrictions: {
 	    users: [],
