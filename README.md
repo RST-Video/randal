@@ -21,8 +21,8 @@ These installation steps have been modified from the [Setting up your developmen
 For locally hosted development and demos, you may want to leverage the webhook payload delivery service, [smee.io](https://smee.io/).
 
 ```
-# sudo yum install npm
-# sudo npm install --global smee-client
+$ sudo yum install npm
+$ sudo npm install --global smee-client
 ```
 
 The usage of smee.io with GitHub apps is outlined in https://developer.github.com/apps/quickstart-guides/setting-up-your-development-environment/#step-1-start-a-new-smee-channel
