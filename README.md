@@ -70,7 +70,7 @@ ruby randal_service.rb
 When creating new repositories in GitHub, you should see the "master" branch now has protections, and an Issue should be generated notifying the specified GitHub user along with a summary of protections applied to the "master" branch.
 
 ## Additional useful documentation and links
-* [Sinata documentation](https://github.com/sinatra/sinatra#table-of-contents)
+* [Sinatra documentation](https://github.com/sinatra/sinatra#table-of-contents)
 * [GitHub Webhooks](https://developer.github.com/webhooks/)
 * [GitHub API Reference](https://developer.github.com/v3/)
 * [Branch Protection with Oktokit](https://www.rubydoc.info/gems/octokit/Octokit/Client/Repositories#protect_branch-instance_method)
